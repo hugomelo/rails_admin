@@ -269,6 +269,7 @@
     },
 
     _overloadRenderItem: function() {
+      if (!this.input.data('ui-autocomplete')) { return null }
       this.input.data('ui-autocomplete')._renderItem = function(ul, item) {
         return $('<li></li>')
           .data('ui-autocomplete-item', item)
